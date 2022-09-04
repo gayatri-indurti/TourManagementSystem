@@ -1,0 +1,45 @@
+.start{
+	width: 400px;
+	height: 350px;
+	text-align: center;
+	background-color: #add8e6;
+	opacity: 0.8;
+	margin: 0 auto;
+	margin-top: 100px;
+}
+
+.bg{
+	background-image: url('banner.png');
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+	background-size: cover;
+}
+
+.txtbox{
+
+	margin-top: 15px;
+	background: white;
+	text-align: start;
+	font-size: 15px;
+	font-family: sans-serif;
+	height: 30px;
+	width: 300px;
+	padding: 15px;
+	border:none;
+	border-radius: 10px;
+
+
+}
+
+.btn{
+	width: 300px;
+	height: 40px;
+	border-radius: 15px;
+	font-size: 20px;
+	background-color: lightgreen;
+}
+
+
+
+

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Booking form</title>
+	<link rel="stylesheet" type="text/css" href="registration.css">
+	<script type="text/javascript">
+		function validate() {
+		 var name = document.forms["myform"]["fname"].value;
+		 if(name==""){
+		 alert("Please enter your first name");
+		 return false;
+		 }
+		 var lname = document.forms["myform"]["lname"].value;
+		 if(lname==""){
+		 alert("Please enter your last name");
+		 return false;
+		 }
+		 var email = document.forms["myform"]["email"].value;
+		 if(email==""){
+		 alert("Please enter your emailId");
+		 return false;
+		 }else{
+		 var re = /^(?:[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&amp;'*+/=?^_`{|}~-]+)*|"(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21\x23-\x5b\x5d-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])*")@(?:(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?|\[(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?|[a-z0-9-]*[a-z0-9]:(?:[\x01-\x08\x0b\x0c\x0e-\x1f\x21-\x5a\x53-\x7f]|\\[\x01-\x09\x0b\x0c\x0e-\x7f])+)\])$/;
+		 var x=re.test(email);
+		 if(x){
+		 }else{
+		 alert("Your Email id is not in the correct format");
+		 return false;
+		 } 
+		 } 
+		 var mobile = document.forms["myform"]["phno"].value;
+		 if(mobile==""){
+		 alert("Please enter your phone number");
+		 return false;
+		 }else{
+		 if(isNaN(mobile)){
+		 alert("Your phone number is not valid");
+		 return false;
+		 }
+		 } 
+		 var address = document.forms["myform"]["address"].value;
+		 if(address==""){
+		 alert("Please enter your address");
+		 return false;
+		 }
+		}
+		</script>
+</head>
+<body>
+	<header class="header">
+		<h1 style="text-align: center;">Registration Form</h1>
+	</header>
+	<center>
+	<form action="Thanks.html" name="myform" id="form" onsubmit="return validate()" method="POST">
+		<table align="center" class="table">
+			<tr>
+				<td>First Name:</td>
+				<td><input type="text" name="fname" placeholder="Enter your first name" id="fname" ></td>
+				<td><label>Last Name:&nbsp</label><input type="text" name="lname" placeholder="Enter your last name" id="lname" ></td><br>
+			</tr>
+
+			<tr>
+				<td>Email ID:</td>
+				<td><input type="text" name="email" placeholder="Enter your Email ID" id="emailid" ></td>
+				<td><label>Password:&nbsp&nbsp&nbsp</label><input type="password" name="password" id="password" placeholder="Enter your password"></td>
+			</tr>
+			<tr>
+				<td>Address:</td>
+				<td><input type="text" name="address" placeholder="" ></td>
+
+				<td><label>City:&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</label><input type="text" name="city" placeholder=""  required></td>
+				<td><label>State:&nbsp</label><input type="text" name="state" placeholder="" required></td>
+				<td><label>Pincode:&nbsp</label><input type="text" name="pincode" placeholder="" required></td>
+			</tr>
+			<tr>
+				<td>Phone Number</td>
+				<td><input type="text" name="phone" placeholder="Enter your Phone Number" id="phno" ></td>
+			</tr>
+			<tr>
+				<td>Gender</td>
+				<td><input type="radio" name="gender" value="Male" required>Male</td>
+				<td><input type="radio" name="gender" value="Female" required>Female</td>
+			</tr>
+			<tr>
+				<td>Total Number of Passengers</td>
+				<td><input type="number" name="passengers" min="1" max="15" required></td>
+			</tr>
+			<tr>
+				<td>Start Date</td>
+				<td><input type="date" name="date" required></td>
+			</tr>
+			<tr>
+				<td>Select the Location</td>
+				<td><select name="location">
+					<option value="North India Packages">North India Packages</option>
+					<option value="South India Packages">South India Packages</option>
+					<option value="East North India Packages">East North India Packages</option>
+					<option value="Holiday Packages">Holiday Packages</option>
+				</select></td>
+			</tr>
+			<tr>
+				<td>Select the Package</td>
+				<td><select name="package">
+					<option value="Tajmahal - Agra - Mathura">Tajmahal - Agra - Mathura</option>
+					<option value="Amritsar - Wagah Border - Manali">Amritsar - Wagah Border - Manali </option>
+					<option value="Srinagar - Gulmarg - Pahalgam">Srinagar - Gulmarg - Pahalgam</option>
+					<option value="Yamunotri - Gangotri - Kedarnath">Yamunotri - Gangotri - Kedarnath </option>
+					<option value="Amritsar Wagah Border Kurukshetra Katra">Amritsar Wagah Border Kurukshetra Katra</option>
+					<option value="Ernakulam-athirampilly-munnar">Ernakulam-athirampilly-munnar</option>
+					<option value="Belur and Halebidu">Belur and Halebidu</option>
+					<option value="Dudhsagar Falls">Dudhsagar Falls</option>
+					<option value="Kalimpong - Darjeeling - Gangtok">Kalimpong - Darjeeling - Gangtok</option>
+					<option value="Darjeeling - Gangtok">Darjeeling - Gangtok</option>
+					<option value="Kolkata Tour Programme">Kolkata Tour Programme</option>
+					<option value="Varanasi-sarnath--allahabad-varanasi">Varanasi-sarnath--allahabad-varanasi</option>
+					<option value="Goa Package">Goa Package</option>
+					<option value="Andaman Tour Programme">Andaman Tour Programme</option>
+				</select></td>
+			</tr>
+			
+		</table><br><br>
+		<center><button class="registerbtn" ><a href="Thanks.html">SUBMIT</a></button></center>
+	</form>
+</center>
+
+	
+	
+</body>
+</html>
